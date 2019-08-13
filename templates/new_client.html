@@ -1,24 +1,15 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>New Client Intake Form</title>
-        <style type="text/css">
-            .error {
-                color: red;
-            }
-        </style>
-    </head>
-    <body>
-        
+{% extends "base.html" %} 
 
-        <form action="/signup" id="form" method="POST">
-            <h1>SignUp</h1>
-            <label for="username">Username</label>
-            <input type="text" name="username" id="username" value="" >
-            
+{% block content %}        
+
+        <form action="/new_client" id="form" method="POST">
+            <h1>Name</h1>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" value="" >
             
             <br></br>
 
+            <!-- change all the following based on info given to me by Amy  -->
             <label for="password">Password</label>
             <input type="password" name="password" id="password" value="" required>
             
@@ -36,5 +27,6 @@
             <button type="submit">Submit</button>
         </form>
             
-    </body>
-</html>
+ 
+
+{% endblock %}
